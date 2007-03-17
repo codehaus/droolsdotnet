@@ -1,0 +1,12 @@
+package org.drools.examples
+ 
+import org.drools.dotnet.examples
+
+rule "D to E"
+	when
+		State(Name == "D", StateInt == State.FINISHED )			
+		e : State(Name == "E", StateInt == State.NOTRUN )
+	then
+		System.Console.Out.WriteLine(e.Name + " finished" );
+		e.StateInt = ( State.FINISHED );
+end
