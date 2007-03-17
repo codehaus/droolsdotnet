@@ -1,0 +1,6 @@
+#place your comments here - this is just a description for your own purposes.
+[when]There is a customer ticket with status of "{Status}"=customer : Customer( )   ticket : Ticket( Customer == customer, Status == "{Status}" )
+[when]There is a "{Subscription}" customer with a ticket status of "{Status}"=customer : Customer(Subscription == "{Subscription}") ticket : Ticket( Customer == customer, Status == "{Status}")
+[then]Log "{Message}"=System.Console.Out.WriteLine("{Message} " + ticket);
+[then]Escalate the ticket=(ticket.Status = "Escalate"); modify(ticket);
+[then]Send escalation email=sendEscalationEmail( customer, ticket );
