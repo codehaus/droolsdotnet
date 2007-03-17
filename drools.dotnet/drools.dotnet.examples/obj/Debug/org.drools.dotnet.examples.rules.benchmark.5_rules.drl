@@ -1,0 +1,38 @@
+package org.drools.samples
+import org.drools.dotnet.examples
+
+rule rule0
+  when
+    declAcc : Account(Status == "standard", Title == "mr", AccountId == "acc0")
+  then
+    System.Console.Out.WriteLine("rule0 fired");
+end
+
+rule rule1
+  when
+    declAcc : Account(Status == "standard", Title == "mr", AccountId == "acc1")
+  then
+    System.Console.Out.WriteLine("rule1 fired");
+end
+
+rule rule2
+  when
+    declAcc : Account(Status == "standard", Title == "mr", AccountId == "acc2")
+  then
+    System.Console.Out.WriteLine("rule2 fired");
+end
+
+rule rule3
+  when
+    declAcc : Account(Status == "standard", Title == "mr", AccountId == "acc3")
+  then
+    System.Console.Out.WriteLine("rule3 fired");
+end
+
+rule rule4
+  when
+    declAcc : Account(Status == "standard", Title == "mr", AccountId == "acc4")
+  then
+    System.Console.Out.WriteLine("rule4 fired");
+end
+
