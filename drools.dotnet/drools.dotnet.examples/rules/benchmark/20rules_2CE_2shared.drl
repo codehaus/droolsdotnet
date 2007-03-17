@@ -1,0 +1,164 @@
+package org.drools.samples
+import org.drools.dotnet.examples
+
+
+rule rule0
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family0", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule0 fired");
+end
+
+rule rule1
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family1", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule1 fired");
+end
+
+rule rule2
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family2", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule2 fired");
+end
+
+rule rule3
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family3", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule3 fired");
+end
+
+rule rule4
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family4", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule4 fired");
+end
+
+rule rule5
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family5", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule5 fired");
+end
+
+rule rule6
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family6", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule6 fired");
+end
+
+rule rule7
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family7", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule7 fired");
+end
+
+rule rule8
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family8", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule8 fired");
+end
+
+rule rule9
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family9", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule9 fired");
+end
+
+rule rule10
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family10", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule10 fired");
+end
+
+rule rule11
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family11", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule11 fired");
+end
+
+rule rule12
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family12", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule12 fired");
+end
+
+rule rule13
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family13", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule13 fired");
+end
+
+rule rule14
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family14", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule14 fired");
+end
+
+rule rule15
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family15", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule15 fired");
+end
+
+rule rule16
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family16", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule16 fired");
+end
+
+rule rule17
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family17", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule17 fired");
+end
+
+rule rule18
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family18", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule18 fired");
+end
+
+rule rule19
+  when
+    declAcc : Account(Status == "standard")
+    declAddr : Address(City == "boston", State == "ma", HouseType == "single family19", Status == "not listed", Country == "usa") 
+  then
+    System.Console.Out.WriteLine("rule19 fired");
+end
+
