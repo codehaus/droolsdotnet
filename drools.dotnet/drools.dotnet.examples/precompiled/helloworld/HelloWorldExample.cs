@@ -42,46 +42,8 @@ namespace org.drools.dotnet.examples.precompiled
     public class HelloWorldTests
     {
        
-        public void TestASavePackage()
-        {
-
-
-            PackageBuilder builder = new PackageBuilder();
-            System.IO.Stream stream = Assembly.GetAssembly(this.GetType()).GetManifestResourceStream("org.drools.dotnet.examples.rules.precompiled.HelloWorld.drl");
-            builder.AddPackageFromDrl("HelloWorld.drl", stream);
-            FileStream fstream = new FileStream("C:\\helloworldPackage.pkg", FileMode.Create);
-            builder.GetPackage().Save(fstream);
-            stream.Close();
-            fstream.Close();
-
-
-        }
-       
-        public void TestBLoadPackage()
-        {
-            FileStream stream = new FileStream("C:\\helloworldPackage.pkg", FileMode.Open);
-            Package newPkg = new Package();
-            newPkg.Load(stream);
-            stream.Close();
-            PackageBuilder builder = new PackageBuilder(newPkg);
-            Package pkg = builder.GetPackage();
-            RuleBase ruleBase = RuleBaseFactory.NewRuleBase();
-            ruleBase.AddPackage(pkg);
-            WorkingMemory workingMemory = ruleBase.NewWorkingMemory();
-
-            //go !
-            Message message = new Message();
-            message.message = "Hello World";
-            message.status = Message.HELLO;
-            workingMemory.assertObject(message);
-            workingMemory.fireAllRules();
-
-
-
-        }
-
-        
-        public void TestCSaveRuleBase()
+        [Test]
+        public void TestASaveRuleBase()
         {
 
 
@@ -91,16 +53,16 @@ namespace org.drools.dotnet.examples.precompiled
             Package pkg = builder.GetPackage();
             RuleBase ruleBase = RuleBaseFactory.NewRuleBase();
             ruleBase.AddPackage(pkg);
-            FileStream fstream = new FileStream("C:\\helloworldRuleBase.pkg", FileMode.Create);
+            FileStream fstream = new FileStream("HelloworldRuleBase.rlb", FileMode.Create);
             ruleBase.Save(fstream);
             fstream.Close();
         }
 
         [Test]
-        public void TestDLoadRuleBase()
+        public void TestBLoadRuleBase()
         {
             RuleBase ruleBase = RuleBaseFactory.NewRuleBase();
-            FileStream fstream = new FileStream("C:\\helloworldRuleBase.pkg", FileMode.Open);
+            FileStream fstream = new FileStream("HelloworldRuleBase.rlb", FileMode.Open);
             ruleBase.Load(fstream);
             WorkingMemory workingMemory = ruleBase.NewWorkingMemory();
 
