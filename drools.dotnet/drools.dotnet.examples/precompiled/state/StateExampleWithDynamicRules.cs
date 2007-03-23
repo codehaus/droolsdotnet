@@ -47,7 +47,7 @@ namespace org.drools.dotnet.examples.precompiled
             RuleBase ruleBase = RuleBaseFactory.NewRuleBase();
             ruleBase.AddPackage(pkg);
 
-            FileStream fstream = new FileStream("C:\\StateDynamic.pkg", FileMode.Create);
+            FileStream fstream = new FileStream("StateDynamic.rlb", FileMode.Create);
             ruleBase.Save(fstream);
             stream.Close();
             fstream.Close();
@@ -56,9 +56,9 @@ namespace org.drools.dotnet.examples.precompiled
         }
 
         [Test]
-		public void TestBLoadAndSaveChangedState()
+		public void TestBLoadAndChangeSavedState()
 		{
-            FileStream fstream = new FileStream("C:\\StateDynamic.pkg", FileMode.Open);
+            FileStream fstream = new FileStream("StateDynamic.rlb", FileMode.Open);
             RuleBase ruleBase = RuleBaseFactory.NewRuleBase();
             ruleBase.Load(fstream);
             fstream.Close();
@@ -89,7 +89,7 @@ namespace org.drools.dotnet.examples.precompiled
             Package pkg = builder.GetPackage();
             ruleBase.AddPackage(pkg);
 
-            fstream = new FileStream("C:\\StateDynamic.pkg", FileMode.Create);
+            fstream = new FileStream("StateDynamic.rlb", FileMode.Create);
             ruleBase.Save(fstream);
 
             stream.Close();
@@ -100,7 +100,7 @@ namespace org.drools.dotnet.examples.precompiled
         [Test]
 		public void TestLoadState()
 		{
-            FileStream fstream = new FileStream("C:\\StateDynamic.pkg", FileMode.Open);
+            FileStream fstream = new FileStream("StateDynamic.rlb", FileMode.Open);
             RuleBase ruleBase = RuleBaseFactory.NewRuleBase();
             ruleBase.Load(fstream);
             WorkingMemory workingMemory = ruleBase.NewWorkingMemory();
