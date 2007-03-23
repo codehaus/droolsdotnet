@@ -49,8 +49,8 @@ namespace org.drools.dotnet.examples.precompiled
             Package pkg = builder.GetPackage();
             RuleBase ruleBase = RuleBaseFactory.NewRuleBase();
             ruleBase.AddPackage(pkg);
-            FileStream fstream = new FileStream("C:\\troubleticketRuleBase.pkg", FileMode.Create);
-            pkg.Save(fstream);
+            FileStream fstream = new FileStream("TroubleticketRuleBase.rlb", FileMode.Create);
+            ruleBase.Save(fstream);
             fstream.Close();
             stream.Close();
  		}
@@ -59,13 +59,9 @@ namespace org.drools.dotnet.examples.precompiled
         public void TestBLoadPkg()
         {
             //AppDomain.CurrentDomain.Load("tempAssembly.dll");
-            FileStream stream = new FileStream("C:\\troubleticket.pkg", FileMode.Open);
-            Package newPkg = new Package();
-            newPkg.Load(stream);
-            PackageBuilder builder = new PackageBuilder(newPkg);
-            Package pkg = builder.GetPackage();
+            FileStream stream = new FileStream("TroubleticketRuleBase.rlb", FileMode.Open);
             RuleBase ruleBase = RuleBaseFactory.NewRuleBase();
-            ruleBase.AddPackage(pkg);
+            ruleBase.Load(stream);
             WorkingMemory workingMemory = ruleBase.NewWorkingMemory();
 
             Customer a = new Customer("A", "Gold");
