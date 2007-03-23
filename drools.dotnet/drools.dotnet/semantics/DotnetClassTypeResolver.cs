@@ -75,7 +75,7 @@ namespace org.drools.dotnet.semantics
         /* (non-Javadoc)
          * @see org.drools.semantics.java.TypeResolver#getImports()
          */
-        public List getImports()
+        public override List getImports()
         {
             return this.imports;
         }
@@ -88,7 +88,7 @@ namespace org.drools.dotnet.semantics
         /* (non-Javadoc)
          * @see org.drools.semantics.java.TypeResolver#addImport(java.lang.String)
          */
-        public void addImport(string importEntry)
+        public override void addImport(string importEntry)
         {
             if (!this.imports.contains(importEntry))
             {
