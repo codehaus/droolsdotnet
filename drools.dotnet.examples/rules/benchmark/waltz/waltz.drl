@@ -1,0 +1,485 @@
+#created on: 25/03/2006
+package org.drools.integrationtests.waltz
+
+import org.drools.dotnet.examples
+
+# the starting rule
+rule "begin waltz"
+	when
+		declstage : Stage(Value == Stage.START)
+	then 
+	    assert (new Line( 122,  107));
+	    assert (new Line( 107, 2207));
+    	assert (new Line(2207, 3204));
+    	assert (new Line(3204, 6404));
+    	assert (new Line(2216, 2207));
+    	assert (new Line(3213, 3204));
+    	assert (new Line(2216, 3213));
+    	assert (new Line( 107, 2601));
+    	assert (new Line(2601, 7401));
+    	assert (new Line(6404, 7401));
+    	assert (new Line(3213, 6413));
+    	assert (new Line(6413, 6404));
+    	assert (new Line(7416, 7401));
+    	assert (new Line(5216, 6413));
+    	assert (new Line(2216, 5216));
+    	assert (new Line( 122, 5222));
+    	assert (new Line(5222, 7416));
+    	assert (new Line(5222, 5216));
+    	declstage.Value = Stage.DUPLICATE;
+    	modify ( declstage );
+    	System.Console.Out.WriteLine("Waltz started");
+    	System.Console.Out.WriteLine("Stage: duplicate");
+end
+
+#If the duplicate flag is set, and there is still a line in WM, delete the line
+#and add two edges. One edge runs from P1 to P2 and the other runs from P2 to
+#P1.  We then plot the edge.
+rule "reverse edges"
+	when
+		Stage(Value == Stage.DUPLICATE)
+		declline : Line ( declP1:P1, declP2:P2 )
+	then 
+		System.Console.Out.WriteLine("Draw "+declP1+" "+declP2);
+		assert( new Edge ( declP1, declP2, false, Edge.NIL, false ) );
+		assert( new Edge ( declP2, declP1, false, Edge.NIL, false ) );
+		retract( declline ); 
+end
+
+#If the duplicating flag is set, and there are no more lines, then remove the
+#duplicating flag and set the make junctions flag.
+rule "reversing done" salience -10
+	when
+        declstage: Stage ( Value == Stage.DUPLICATE )
+	then
+        declstage.Value =  Stage.DETECT_JUNCTIONS ;
+        modify(declstage);
+    	System.Console.Out.WriteLine("Stage: detect junctions");
+end
+
+#If three edges meet at a point and none of them have already been Joined in
+#a junction, then make the corresponding Type of junction and Label the
+#edges Joined.  This production calls make-3_junction to determine
+#what Type of junction it is based on the angles inscribed by the
+#intersecting edges
+rule "make 3 junction" salience 10
+	when
+        Stage ( Value == Stage.DETECT_JUNCTIONS )
+        decledge1: Edge( declBasePoint:P1, decledge1P2:P2, Joined==false )
+        decledge2: Edge( P1 == declBasePoint, decledge2P2 : P2 != decledge1P2, Joined == false )
+        decledge3: Edge( P1 == declBasePoint, decledge3P2 : P2 != decledge1P2, P2 != decledge2P2, Joined == false )
+	then
+	    Junction junction = WaltzUtil.make_3_junction ( declBasePoint, decledge1P2, decledge2P2, decledge3P2);
+	    assert( junction );
+	    decledge1.Joined = true;
+	    decledge2.Joined = true;
+	    decledge3.Joined = true;
+	    modify( decledge1 );
+	    modify( decledge2 );
+	    modify( decledge3 );
+end
+
+#If two, and only two, edges meet that have not already been Joined, then
+#the junction is an "L"
+rule "make L"
+	when
+        Stage ( Value == Stage.DETECT_JUNCTIONS )
+        decledge1: Edge( declBasePoint:P1, decledge1P2:P2, Joined==false )
+        decledge2: Edge( P1==declBasePoint, decledge2P2:P2 != decledge1P2, Joined == false )
+        not Edge( P1==declBasePoint, P2 != decledge1P2, P2 != decledge2P2 )
+	then
+	    assert( new Junction(decledge1P2, decledge2P2, 0, declBasePoint, Junction.L) );
+	    decledge1.Joined = true;
+	    decledge2.Joined = true;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+
+#If the detect junctions flag is set, and there are no more un_Joined edges,
+#set the find_initial_boundary flag
+rule "detecting done" salience -10
+    when
+        declstage : Stage ( Value == Stage.DETECT_JUNCTIONS )
+ 	then
+ 	    declstage.Value =  Stage.FIND_INITIAL_BOUNDARY ;
+ 	    modify( declstage );
+    	System.Console.Out.WriteLine("Stage: find initial boundary");
+end
+
+#If the initial boundary junction is an L, then we know it's Labelling
+rule "initial boundary junction L"
+	when
+	    declstage : Stage ( Value == Stage.FIND_INITIAL_BOUNDARY )
+	             Junction( Type == Junction.L, declBasePoint:BasePoint, declP1:P1, declP2:P2 )
+	    decledge1 : Edge ( P1 == declBasePoint, P2 == declP1 )
+	    decledge2 : Edge ( P1 == declBasePoint, P2 == declP2 )
+        not Junction( declbp:BasePoint > declBasePoint )
+	then
+	    decledge1.Label = Edge.B ;
+	    decledge2.Label = Edge.B ;
+	    declstage.Value =  Stage.FIND_SECOND_BOUNDARY ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+	    modify( declstage );
+    	System.Console.Out.WriteLine("Stage: find second boundary");
+end
+
+# Ditto for an arrow
+rule "initial boundary junction arrow"
+	when
+	    declstage : Stage ( Value == Stage.FIND_INITIAL_BOUNDARY )
+	             Junction( Type == Junction.ARROW, declBasePoint:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+	    decledge1 : Edge ( P1 == declBasePoint, P2 == declP1 )
+	    decledge2 : Edge ( P1 == declBasePoint, P2 == declP2 )
+	    decledge3 : Edge ( P1 == declBasePoint, P2 == declP3 )
+        not Junction( declbp:BasePoint > declBasePoint )
+	then
+	    decledge1.Label = Edge.B ;
+	    decledge2.Label = Edge.PLUS ;
+	    decledge3.Label = Edge.B ;
+	    declstage.Value =  Stage.FIND_SECOND_BOUNDARY ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+	    modify( decledge3 );
+	    modify( declstage );
+    	System.Console.Out.WriteLine("Stage: find second boundary");
+end
+
+# If we have already found the first boundary point, then find the second
+# boundary point, and Label it.
+rule "second boundary junction L"
+	when
+	    declstage : Stage ( Value == Stage.FIND_SECOND_BOUNDARY )
+	             Junction( Type == Junction.L, declBasePoint:BasePoint, declP1:P1, declP2:P2 )
+	    decledge1 : Edge ( P1 == declBasePoint, P2 == declP1 )
+	    decledge2 : Edge ( P1 == declBasePoint, P2 == declP2 )
+        not Junction( declbp:BasePoint < declBasePoint )
+	then
+	    decledge1.Label =  Edge.B ;
+	    decledge2.Label = Edge.B ;
+	    declstage.Value = Stage.LABELING;
+	    modify( decledge1 );
+	    modify( decledge2 );
+	    modify( declstage );
+    	System.Console.Out.WriteLine("Stage: Labeling");
+end
+
+# Ditto for arrow
+rule "second boundary junction arrow"
+	when
+	    declstage : Stage ( Value == Stage.FIND_SECOND_BOUNDARY )
+	             Junction( Type == Junction.ARROW, declBasePoint:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+	    decledge1 : Edge ( P1 == declBasePoint, P2 == declP1 )
+	    decledge2 : Edge ( P1 == declBasePoint, P2 == declP2 )
+	    decledge3 : Edge ( P1 == declBasePoint, P2 == declP3 )
+        not Junction( declbp:BasePoint < declBasePoint )
+	then
+	    decledge1.Label = Edge.B ;
+	    decledge2.Label = Edge.PLUS ;
+	    decledge3.Label = Edge.B ;
+	    declstage.Value = Stage.LABELING ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+	    modify( decledge3 );
+	    modify( declstage );
+    	System.Console.Out.WriteLine("Stage: Labeling");
+end
+ 
+# If we have an edge whose Label we already know definitely, then
+# Label the corresponding edge in the other direction
+rule "match edge"
+	when
+	    Stage( Value == Stage.LABELING )
+        decledge1: Edge( declP1:P1, declP2:P2, declLabel:Label != Edge.NIL )
+        decledge2: Edge( P1 == declP2, P2 == declP1, Label == Edge.NIL )
+	then
+	    decledge1.Plotted = true;
+	    decledge2.Label = declLabel;
+	    decledge2.Plotted = true;
+	    modify( decledge1 );
+	    modify( decledge2 );
+	    System.Console.Out.WriteLine("Plot "+declLabel+" "+declP1+" "+declP2);
+end
+
+# The following productions propogate the possible Labellings of the edges
+# based on the Labellings of edges incident on adjacent junctions.  Since
+# from the initial boundary productions, we have determined the Labellings of
+# of atleast two junctions, this propogation will Label all of the junctions
+# with the possible Labellings.  The search space is pruned due to filtering,
+# i.e.(not only Label a junction in the ways physically possible based on the
+# Labellings of adjacent junctions.
+rule "Label L"
+	when
+	    Stage( Value == Stage.LABELING )
+	    Junction( Type == Junction.L, declBasePoint:BasePoint )
+        Edge( declP1:P1, declP2:P2, declLabel:Label -> ( declLabel.Equals(Edge.PLUS) || declLabel.Equals(Edge.MINUS) ) )
+        decledge: Edge( P1 == declP1, P2 != declP2, Label == Edge.NIL )
+	then
+	    decledge.Label = Edge.B ;
+	    modify( decledge );
+end 
+ 
+rule "Label tee A" salience 5
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.TEE, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        decledge1: Edge( P1 == declbp, P2 == declP1, Label == Edge.NIL )
+        decledge2: Edge( P1 == declbp, P2 == declP3 )
+	then
+	    decledge1.Label =  Edge.B ;
+	    decledge2.Label = Edge.B ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end 
+
+
+rule "Label tee B"
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.TEE, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        decledge1: Edge( P1 == declbp, P2 == declP1 )
+        decledge2: Edge( P1 == declbp, P2 == declP3, Label == Edge.NIL )
+	then
+	    decledge1.Label = Edge.B ;
+	    decledge2.Label = Edge.B ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+
+rule "Label fork 1"
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.FORK, declbp:BasePoint )
+        Edge( P1 == declbp, declP1:P2, Label == Edge.PLUS )
+        decledge1: Edge( P1 == declbp, declP2:P2 != declP1, Label == Edge.NIL )
+        decledge2: Edge( P1 == declbp, declP3:P2 != declP1, P2 != declP2 )
+	then
+	    decledge1.Label =  Edge.PLUS ;
+	    decledge2.Label =  Edge.PLUS ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+
+rule "Label fork 2"
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.FORK, declbp:BasePoint )
+        Edge( P1 == declbp, declP1:P2, Label == Edge.B )
+        Edge( P1 == declbp, declP2:P2 != declP1, Label == Edge.MINUS )
+        decledge: Edge( P1 == declbp, declP3:P2 != declP1, P2 != declP2, Label == Edge.NIL )
+	then
+	    decledge.Label =  Edge.B ;
+	    modify( decledge );
+end
+
+rule "Label fork 3"
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.FORK, declbp:BasePoint )
+        Edge( P1 == declbp, declP1:P2, Label == Edge.B )
+        Edge( P1 == declbp, declP2:P2 != declP1, Label == Edge.B )
+        decledge: Edge( P1 == declbp, declP3:P2 != declP1, P2 != declP2, Label == Edge.NIL )
+	then
+	    decledge.Label =  Edge.MINUS ;
+	    modify( decledge );
+end
+
+rule "Label fork 4"
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.FORK, declbp:BasePoint )
+        Edge( P1 == declbp, declP1:P2, Label == Edge.MINUS )
+        Edge( P1 == declbp, declP2:P2 != declP1, Label == Edge.MINUS )
+        decledge: Edge( P1 == declbp, declP3:P2 != declP1, P2 != declP2, Label == Edge.NIL )
+	then
+	    decledge.Label =  Edge.MINUS ;
+	    modify( decledge );
+end
+ 
+rule "Label arrow 1A" salience 5
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.ARROW, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        Edge( P1 == declbp, P2 == declP1, declLabel:Label -> ( declLabel.Equals(Edge.B) || declLabel.Equals(Edge.MINUS) ) )
+        decledge1: Edge( P1 == declbp, P2 == declP2, Label == Edge.NIL )
+        decledge2: Edge( P1 == declbp, P2 == declP3 )
+	then
+	    decledge1.Label =  Edge.PLUS ;
+	    decledge2.Label =  declLabel ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+ 
+rule "Label arrow 1B" 
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.ARROW, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        Edge( P1 == declbp, P2 == declP1, declLabel:Label -> ( declLabel.Equals(Edge.B) || declLabel.Equals(Edge.MINUS) ) )
+        decledge1: Edge( P1 == declbp, P2 == declP2 )
+        decledge2: Edge( P1 == declbp, P2 == declP3, Label == Edge.NIL )
+	then
+	    decledge1.Label =  Edge.PLUS ;
+	    decledge2.Label =  declLabel ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+ 
+rule "Label arrow 2A" salience 5 
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.ARROW, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        Edge( P1 == declbp, P2 == declP3, declLabel:Label -> ( declLabel.Equals(Edge.B) || declLabel.Equals(Edge.MINUS) ) )
+        decledge1: Edge( P1 == declbp, P2 == declP2, Label == Edge.NIL )
+        decledge2: Edge( P1 == declbp, P2 == declP1 )
+	then
+	    decledge1.Label =  Edge.PLUS ;
+	    decledge2.Label =  declLabel ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+ 
+rule "Label arrow 2B"
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.ARROW, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        Edge( P1 == declbp, P2 == declP3, declLabel:Label -> ( declLabel.Equals(Edge.B) || declLabel.Equals(Edge.MINUS) ) )
+        decledge1: Edge( P1 == declbp, P2 == declP2 )
+        decledge2: Edge( P1 == declbp, P2 == declP1, Label == Edge.NIL )
+	then
+	    decledge1.Label =  Edge.PLUS ;
+	    decledge2.Label =  declLabel ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+ 
+rule "Label arrow 3A" salience 5 
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.ARROW, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        Edge( P1 == declbp, P2 == declP1, Label == Edge.PLUS )
+        decledge1: Edge( P1 == declbp, P2 == declP2, Label == Edge.NIL )
+        decledge2: Edge( P1 == declbp, P2 == declP3 )
+	then
+	    decledge1.Label =  Edge.MINUS ;
+	    decledge2.Label =  Edge.PLUS ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+ 
+rule "Label arrow 3B" 
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.ARROW, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        Edge( P1 == declbp, P2 == declP1, Label == Edge.PLUS )
+        decledge1: Edge( P1 == declbp, P2 == declP2 )
+        decledge2: Edge( P1 == declbp, P2 == declP3, Label == Edge.NIL )
+	then
+	    decledge1.Label =  Edge.MINUS ;
+	    decledge2.Label =  Edge.PLUS ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+ 
+rule "Label arrow 4A" salience 5 
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.ARROW, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        Edge( P1 == declbp, P2 == declP3, Label == Edge.PLUS )
+        decledge1: Edge( P1 == declbp, P2 == declP2, Label == Edge.NIL )
+        decledge2: Edge( P1 == declbp, P2 == declP1 )
+	then
+	    decledge1.Label =  Edge.MINUS ;
+	    decledge2.Label =  Edge.PLUS ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+ 
+rule "Label arrow 4B" 
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.ARROW, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        Edge( P1 == declbp, P2 == declP3, Label == Edge.PLUS )
+        decledge1: Edge( P1 == declbp, P2 == declP2 )
+        decledge2: Edge( P1 == declbp, P2 == declP1, Label == Edge.NIL )
+	then
+	    decledge1.Label =  Edge.MINUS ;
+	    decledge2.Label =  Edge.PLUS ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+ 
+rule "Label arrow 5A" salience 5 
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.ARROW, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        Edge( P1 == declbp, P2 == declP2, Label == Edge.MINUS )
+        decledge1: Edge( P1 == declbp, P2 == declP1 )
+        decledge2: Edge( P1 == declbp, P2 == declP3, Label == Edge.NIL )
+	then
+	    decledge1.Label =  Edge.PLUS ;
+	    decledge2.Label =  Edge.PLUS ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+
+rule "Label arrow 5B" 
+	when
+        Stage( Value == Stage.LABELING )
+        Junction( Type == Junction.ARROW, declbp:BasePoint, declP1:P1, declP2:P2, declP3:P3 )
+        Edge( P1 == declbp, P2 == declP2, Label == Edge.MINUS )
+        decledge1: Edge( P1 == declbp, P2 == declP1, Label == Edge.NIL )
+        decledge2: Edge( P1 == declbp, P2 == declP3 )
+	then
+	    decledge1.Label =  Edge.PLUS ;
+	    decledge2.Label =  Edge.PLUS ;
+	    modify( decledge1 );
+	    modify( decledge2 );
+end
+ 
+# The conflict resolution mechanism will only execute a production if no
+# productions that are more complicated are satisfied.  This production is
+# simple, so all of the above dictionary productions will fire before this
+# change of state production
+rule "done Labeling" salience -10
+	when
+        declstage: Stage( Value == Stage.LABELING )
+	then
+        declstage.Value = Stage.PLOT_REMAINING_EDGES ;
+        modify( declstage );
+    	System.Console.Out.WriteLine("Stage: plot remaining edges");
+end
+
+# At this point, some Labellings may have not been plotted, so plot them
+rule "plot remaining"
+	when
+	    Stage( Value == Stage.PLOT_REMAINING_EDGES )
+	    decledge: Edge( Plotted == false, declLabel:Label != Edge.NIL, declP1:P1, declP2:P2 )
+	then
+	    System.Console.Out.WriteLine("Plot "+declLabel+" "+declP1+" "+declP2);
+	     decledge.Plotted = true ;
+	    modify( decledge );
+end
+
+# If we have been un able to Label an edge, assume that it is a boundary.
+# This is a total Kludge, but what the hell. (if we assume only valid drawings
+# will be given for Labeling, this assumption generally is true!)
+rule "plot boundaries"
+    when
+	    declstage: Stage( Value == Stage.PLOT_REMAINING_EDGES )
+	    decledge: Edge( Plotted == false, Label == Edge.NIL, declP1:P1, declP2:P2 )
+	then
+	    System.Console.Out.WriteLine("Plot B "+declP1+" "+declP2);
+	    decledge.Plotted =  true ;
+	    modify( decledge );
+end
+
+# If there is no more work to do, then we are done and flag it.
+rule "done plotting" salience -10
+	when
+	    declstage: Stage( Value == Stage.PLOT_REMAINING_EDGES )
+	then
+	    declstage.Value =  Stage.DONE ;
+	    modify( declstage );
+    	System.Console.Out.WriteLine("Stage: done");
+end
+ 

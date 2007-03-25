@@ -1,0 +1,41 @@
+package org.drools.examples
+ 
+import org.drools.dotnet.examples
+ 
+rule Bootstrap
+	when
+		a : State(Name == "A", StateInt == State.NOTRUN )
+	then
+		System.Console.Out.WriteLine(a.Name + " finished" );
+		a.StateInt = ( State.FINISHED );
+end
+
+ 
+rule "A to B"
+	when
+		State(Name == "A", StateInt == State.FINISHED )
+		b : State(Name == "B", StateInt == State.NOTRUN )		
+	then
+		System.Console.Out.WriteLine(b.Name + " finished" );
+		b.StateInt = ( State.FINISHED );
+end
+
+rule "B to C"
+	
+	when
+		State(Name == "B", StateInt == State.FINISHED )			
+		c : State(Name == "C", StateInt == State.NOTRUN )
+	then
+		System.Console.Out.WriteLine(c.Name + " finished" );
+		c.StateInt = ( State.FINISHED );
+end
+
+rule "B to D"
+salience 10
+	when
+		State(Name == "B", StateInt == State.FINISHED )			
+		d : State(Name == "D", StateInt == State.NOTRUN )
+	then
+		System.Console.Out.WriteLine(d.Name + " finished" );
+		d.StateInt = ( State.FINISHED );
+end
