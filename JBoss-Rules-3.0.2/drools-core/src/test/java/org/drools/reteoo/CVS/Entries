@@ -1,0 +1,31 @@
+D/.svn////
+D/beta////
+/AddRemoveTest.java/0/dummy timestamp/-ko/
+/AgendaTest.java/0/dummy timestamp/-ko/
+/AlphaNodeSwitchTest.java/0/dummy timestamp/-ko/
+/AlphaNodeTest.java/0/dummy timestamp/-ko/
+/BaseNodeTest.java/0/dummy timestamp/-ko/
+/CrossProductTest.java/0/dummy timestamp/-ko/
+/DefaultFactHandleFactoryTest.java/0/dummy timestamp/-ko/
+/EvalConditionNodeTest.java/0/dummy timestamp/-ko/
+/FactHandleTest.java/0/dummy timestamp/-ko/
+/HashedObjectSinkListTest.java/0/dummy timestamp/-ko/
+/InstrumentedReteTuple.java/0/dummy timestamp/-ko/
+/JoinNodeTest.java/0/dummy timestamp/-ko/
+/LeftInputAdapterNodeTest.java/0/dummy timestamp/-ko/
+/LogicalAssertionTest.java/0/dummy timestamp/-ko/
+/MockEvalCondition.java/0/dummy timestamp/-ko/
+/MockObjectSink.java/0/dummy timestamp/-ko/
+/MockObjectSource.java/0/dummy timestamp/-ko/
+/MockTupleSink.java/0/dummy timestamp/-ko/
+/MockTupleSource.java/0/dummy timestamp/-ko/
+/NotNodeTest.java/0/dummy timestamp/-ko/
+/ObjectSourceTest.java/0/dummy timestamp/-ko/
+/ObjectTypeNodeTest.java/0/dummy timestamp/-ko/
+/PropertyChangeListenerTest.java/0/dummy timestamp/-ko/
+/QueryTerminalNodeTest.java/0/dummy timestamp/-ko/
+/ReteTest.java/0/dummy timestamp/-ko/
+/ReteooWorkingMemoryTest.java/0/dummy timestamp/-ko/
+/RuleBaseImplTest.java/0/dummy timestamp/-ko/
+/SchedulerTest.java/0/dummy timestamp/-ko/
+/TupleSourceTest.java/0/dummy timestamp/-ko/
