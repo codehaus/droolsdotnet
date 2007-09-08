@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="4963"
+   repos="http://anonsvn.labs.jboss.com"
+   url="http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/drools-core/src/main/resources"
+   last-author="michael.neale@jboss.com"
+   uuid="c60d74c8-e8f6-0310-9e8f-d4a2fc68ab70"
+   committed-date="2006-06-09T02:17:28.958884Z"
+   name=""
+   kind="dir"
+   committed-rev="4688"/>
+<entry
+   name="org"
+   kind="dir"/>
+<entry
+   checksum="20c4a22e0cacdc3178c4e0fbe4070bef"
+   last-author="michael.neale@jboss.com"
+   prop-time="2006-07-10T01:45:23.265000Z"
+   text-time="2006-06-09T02:17:28.958000Z"
+   committed-date="2006-06-09T02:17:28.958884Z"
+   kind="file"
+   name="overview.html"
+   committed-rev="4688"/>
+</wc-entries>
