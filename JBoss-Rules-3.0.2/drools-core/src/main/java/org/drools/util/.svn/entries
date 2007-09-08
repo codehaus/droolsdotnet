@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="4963"
+   repos="http://anonsvn.labs.jboss.com"
+   url="http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/drools-core/src/main/java/org/drools/util"
+   last-author="mark.proctor@jboss.com"
+   uuid="c60d74c8-e8f6-0310-9e8f-d4a2fc68ab70"
+   committed-date="2006-07-08T23:03:53.286729Z"
+   kind="dir"
+   name=""
+   committed-rev="4955"/>
+<entry
+   checksum="1658084d91dae7997dda701a5ff71131"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="AbstractBaseLinkedListNode.java"
+   committed-rev="4489"/>
+<entry
+   checksum="5dcca8f6a4ebe62466e8d0f044ec8b6d"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="AbstractHashedMap.java"
+   committed-rev="4489"/>
+<entry
+   checksum="166b54144862fefec2c58daf94955757"
+   last-author="tirelli"
+   prop-time="2006-07-10T01:45:17.593000Z"
+   text-time="2006-06-22T02:27:59.876000Z"
+   committed-date="2006-06-22T02:27:59.876603Z"
+   kind="file"
+   name="BaseMultiLinkedListNode.java"
+   committed-rev="4803"/>
+<entry
+   checksum="c2a59fb6f95071798d27e51cc9a595f5"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-06-06T08:52:54.553000Z"
+   committed-date="2006-06-06T08:52:54.553603Z"
+   kind="file"
+   name="BinaryHeapFifoQueue.java"
+   committed-rev="4636"/>
+<entry
+   checksum="b894ee7c1e89354d610e7cfb098fca24"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="CompositeCollection.java"
+   committed-rev="4489"/>
+<entry
+   checksum="a379f3247dfdb0ee31ed71189784091a"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="EmptyMapIterator.java"
+   committed-rev="4489"/>
+<entry
+   checksum="c627caf72575b7328e5084fbad4856dd"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="FastCollection.java"
+   committed-rev="4489"/>
+<entry
+   checksum="aa4faa030445243f4166f729491e9410"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="FastComparator.java"
+   committed-rev="4489"/>
+<entry
+   checksum="c8da48872c91d740b6b80bba5388bec1"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="FastIterator.java"
+   committed-rev="4489"/>
+<entry
+   checksum="b9ce05dcbf59c9d89ab7e66d6b92bc6e"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="FastMap.java"
+   committed-rev="4489"/>
+<entry
+   checksum="6cd1d28be56acfd0816f55232df41cbe"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="IdentityMap.java"
+   committed-rev="4489"/>
+<entry
+   checksum="4bb40a0fb0fdf4703b30f53b5019ed68"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="IteratorChain.java"
+   committed-rev="4489"/>
+<entry
+   checksum="09d626f512de89f1599c79f3971a1e23"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-06-06T09:59:25.312000Z"
+   committed-date="2006-06-06T09:59:25.312049Z"
+   kind="file"
+   name="LinkedList.java"
+   committed-rev="4638"/>
+<entry
+   checksum="5c2ec045472fcc9b7fc5e77ea3a4bb0f"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-06-06T09:59:25.312000Z"
+   committed-date="2006-06-06T09:59:25.312049Z"
+   kind="file"
+   name="LinkedListNode.java"
+   committed-rev="4638"/>
+<entry
+   checksum="8097c572bfb4eb7330628f7a70a1a768"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="LinkedListObjectWrapper.java"
+   committed-rev="4489"/>
+<entry
+   checksum="a3b4f4831e619b6325b3bc95f7fb5ec0"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="MapIterator.java"
+   committed-rev="4489"/>
+<entry
+   checksum="7b4c1f4c286ff1672afda5066bf77e7a"
+   last-author="tirelli"
+   prop-time="2006-07-10T01:45:17.328000Z"
+   text-time="2006-06-22T02:27:59.876000Z"
+   committed-date="2006-06-22T02:27:59.876603Z"
+   kind="file"
+   name="MultiLinkedList.java"
+   committed-rev="4803"/>
+<entry
+   checksum="62d25f70f7ff59f541f5adfa0183a51c"
+   last-author="tirelli"
+   prop-time="2006-07-10T01:45:17.781000Z"
+   text-time="2006-06-22T02:27:59.876000Z"
+   committed-date="2006-06-22T02:27:59.876603Z"
+   kind="file"
+   name="MultiLinkedListNode.java"
+   committed-rev="4803"/>
+<entry
+   checksum="609f86261ea628d95dedbbfa8e9a47c4"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:17.953000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="MultiLinkedListNodeWrapper.java"
+   committed-rev="4489"/>
+<entry
+   checksum="4d18a025ec0e3be1cbbd37be64ebf137"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-06-06T09:59:25.312000Z"
+   committed-date="2006-06-06T09:59:25.312049Z"
+   kind="file"
+   name="PrimitiveLongMap.java"
+   committed-rev="4638"/>
+<entry
+   checksum="126ab39cc0d8ae8faa852f5598603884"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="PrimitiveLongStack.java"
+   committed-rev="4489"/>
+<entry
+   checksum="0726b894b3a6188a7545914aa1a485d6"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="PriorityQueue.java"
+   committed-rev="4489"/>
+<entry
+   checksum="f20fdd4bd97d6ebdce348c78c0bffc9a"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Queue.java"
+   committed-rev="4489"/>
+<entry
+   checksum="f97bfe647d5ac9503d56cc4ce05aeb37"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Queueable.java"
+   committed-rev="4489"/>
+<entry
+   checksum="bf2e6d9b4a579fbbb09ddf6913419c37"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ReflectiveVisitor.java"
+   committed-rev="4489"/>
+<entry
+   kind="dir"
+   name="asm"/>
+<entry
+   name="concurrent"
+   kind="dir"/>
+</wc-entries>
