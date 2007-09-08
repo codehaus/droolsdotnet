@@ -1,0 +1,28 @@
+group javaMethods;
+
+returnValueMethod(declarations, declarationTypes, globals, globalTypes, methodName, text) ::= <<
+public static object <methodName>(<declarationTypes, declarations:{ type, declr | <type> <declr.identifier>}; separator=","><if(globals)><if(declarations)>,<endif><endif> <globalTypes, globals:{ type, identifier | <type> <identifier>}; separator=","> ){
+    return ( <text> );
+}
+>>
+
+predicateMethod(declaration, declarationType, declarations, declarationTypes, globals, globalTypes, methodName, text) ::= <<
+public static bool <methodName>(<declarationType> <declaration.identifier><if(declarations)>,<endif> <declarationTypes, declarations:{ type, declr | <type> <declr.identifier>}; separator=","><if(globals)>,<endif> <globalTypes, globals:{ type, identifier | <type> <identifier>}; separator=","> ){
+    return ( <text> );
+}
+>>
+
+evalMethod(declarations, declarationTypes, globals, globalTypes, methodName, text) ::= <<
+public static bool <methodName>(<declarationTypes, declarations:{ type, declr | <type> <declr.identifier>}; separator=","><if(globals)><if(declarations)>,<endif><endif> <globalTypes, globals:{ type, identifier | <type> <identifier>}; separator=","> ) {
+    return ( <text> );
+}
+>>
+
+consequenceMethod(LineStart, FileName, declarations, declarationTypes, globals, globalTypes, methodName, text) ::= <<
+/*LineNumberInformation*/
+/*LineStart:<LineStart>*/
+/*FileName:<FileName>*/
+public static void <methodName>(org.drools.spi.KnowledgeHelper drools<if(declarations)>,<endif> <declarationTypes, declarations:{ type, declr | <type> <declr.identifier>, org.drools.FactHandle <declr.identifier>__Handle__}; separator=","><if(globals)>,<endif> <globalTypes, globals:{ type, identifier | <type> <identifier>}; separator=","> ) {
+    <text>
+}
+>>
