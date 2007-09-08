@@ -1,0 +1,33 @@
+D/.svn////
+D/asm////
+D/audit////
+D/base////
+D/common////
+D/conflict////
+D/event////
+D/leaps////
+D/reteoo////
+D/rule////
+D/spi////
+D/util////
+D/visualize////
+/Agenda.java/0/dummy timestamp/-ko/
+/CheckedDroolsException.java/0/dummy timestamp/-ko/
+/DroolsEnv.java/0/dummy timestamp/-ko/
+/FactException.java/0/dummy timestamp/-ko/
+/FactHandle.java/0/dummy timestamp/-ko/
+/InitialFact.java/0/dummy timestamp/-ko/
+/IntegrationException.java/0/dummy timestamp/-ko/
+/NoSuchFactHandleException.java/0/dummy timestamp/-ko/
+/NoSuchFactObjectException.java/0/dummy timestamp/-ko/
+/PackageIntegrationException.java/0/dummy timestamp/-ko/
+/QueryResult.java/0/dummy timestamp/-ko/
+/QueryResults.java/0/dummy timestamp/-ko/
+/RuleBase.java/0/dummy timestamp/-ko/
+/RuleBaseConfiguration.java/0/dummy timestamp/-ko/
+/RuleBaseFactory.java/0/dummy timestamp/-ko/
+/RuleIntegrationException.java/0/dummy timestamp/-ko/
+/RuntimeDroolsException.java/0/dummy timestamp/-ko/
+/SynchronizedWorkingMemory.java/0/dummy timestamp/-ko/
+/Visitor.java/0/dummy timestamp/-ko/
+/WorkingMemory.java/0/dummy timestamp/-ko/
