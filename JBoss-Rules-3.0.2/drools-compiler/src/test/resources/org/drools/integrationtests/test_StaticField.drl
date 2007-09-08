@@ -1,0 +1,14 @@
+package org.drools.test
+
+import org.drools.Person
+import org.drools.Cheesery
+
+global java.util.List list
+
+rule "first"
+    when
+       	p : Cheesery(status == Cheesery.SELLING_CHEESE)
+    then
+    	list.add( p );
+
+end   
