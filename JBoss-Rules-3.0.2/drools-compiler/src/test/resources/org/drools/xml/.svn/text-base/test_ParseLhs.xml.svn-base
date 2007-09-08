@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="com.sample"
+         xmlns="http://drools.org/drools-3.0"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+         xs:schemaLocation="http://drools.org/drools-3.0 drools-3.0.xsd">
+         
+	<import name="java.util.HashMap" />
+	<import name="org.drools.*" />	
+	
+	<global identifier="x" type="com.sample.X" />		
+	<global identifier="yada" type="com.sample.Yada" />
+	
+	<function return-type="void" name="myFunc">
+	    <parameter identifier="foo" type="Bar" />
+	    <parameter identifier="bada" type="Bing" />
+	    	    
+	    <body>
+	    	System.out.println("hello world");
+		</body>		
+	</function>
+	
+	<rule name="my rule">
+		<lhs>
+			<and>
+			</and>	
+				
+			<or>
+			</or>
+			
+			<column object-type="Foo" >			
+			</column>							
+				
+			<column identifier="bar" object-type="Bar" >			
+			</column>		
+									
+			<column object-type="Foo">
+				<literal field-name="field1" evaluator="==" value="value1" />
+											
+				<predicate field-name="field1" identifier="var1">1==1</predicate>
+							
+				<return-value field-name="field1" evaluator="==">1==1</return-value>
+							
+				<field-binding field-name="field1" identifier="var1" />
+				
+				<bound-variable field-name="field1" evaluator="==" identifier="var1" />				
+			</column>		
+			
+			<not>
+				<column object-type="Bar" />			
+			</not>
+			
+			<exists>
+				<column object-type="Bar" />							
+			</exists>		
+			
+			<and>
+				<or>
+					<column object-type="Bar" />			
+				</or>
+				<column object-type="Yada" />							
+			</and>							
+				
+			<or>
+				<and>
+					<column object-type="Foo" />							
+				</and>	
+				<column object-type="Zaa" />			
+			</or>	
+			
+			<eval>1==1</eval>					
+		</lhs>
+		
+	    <rhs>
+		</rhs>
+	</rule>
+</package>
