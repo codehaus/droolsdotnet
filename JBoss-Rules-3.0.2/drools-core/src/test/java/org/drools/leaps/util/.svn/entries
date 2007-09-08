@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="4963"
+   repos="http://anonsvn.labs.jboss.com"
+   url="http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/drools-core/src/test/java/org/drools/leaps/util"
+   last-author="bagerman"
+   uuid="c60d74c8-e8f6-0310-9e8f-d4a2fc68ab70"
+   committed-date="2006-06-20T05:22:41.130057Z"
+   kind="dir"
+   name=""
+   committed-rev="4782"/>
+<entry
+   checksum="8b64da4a843659541571f465ead30147"
+   last-author="bagerman"
+   text-time="2006-06-20T05:22:41.130000Z"
+   committed-date="2006-06-20T05:22:41.130057Z"
+   kind="file"
+   name="TableIteratorTest.java"
+   committed-rev="4782"/>
+<entry
+   checksum="197396ff5c6f9aa0347c92cc337701e9"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="TableRecordTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="8033eca766ba2618c880198a32d40338"
+   last-author="bagerman"
+   text-time="2006-06-20T05:22:41.130000Z"
+   committed-date="2006-06-20T05:22:41.130057Z"
+   kind="file"
+   name="TableTest.java"
+   committed-rev="4782"/>
+<entry
+   checksum="9059b60c294786bc48979a62e5b55e25"
+   last-author="bagerman"
+   text-time="2006-06-03T03:16:27.474000Z"
+   committed-date="2006-06-03T03:16:27.474598Z"
+   kind="file"
+   name="TokenStackTest.java"
+   committed-rev="4587"/>
+</wc-entries>
