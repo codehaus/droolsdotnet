@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="4963"
+   repos="http://anonsvn.labs.jboss.com"
+   url="http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/drools-core/src/test/java/org/drools/examples/manners"
+   last-author="mark.proctor@jboss.com"
+   uuid="c60d74c8-e8f6-0310-9e8f-d4a2fc68ab70"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="dir"
+   name=""
+   committed-rev="4489"/>
+<entry
+   checksum="e8b6ee8e5369e7f02d5f7ca63d1319cd"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="BaseMannersTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="ec8ebaf519f60ae70cb4527269147da2"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Chosen.java"
+   committed-rev="4489"/>
+<entry
+   checksum="1bb7b26883b74b6d825915b1ab0d271a"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Context.java"
+   committed-rev="4489"/>
+<entry
+   checksum="7470f66cc02e6d64a9cca4cbd2923e11"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Count.java"
+   committed-rev="4489"/>
+<entry
+   checksum="761fee2ef2385eeccb14371495c9378d"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Guest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="ec6c2003d88ad42c7d997c0cd877db91"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Hobby.java"
+   committed-rev="4489"/>
+<entry
+   checksum="c2e1bc9a7b4dfdab9db40d31542a9c2f"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="LastSeat.java"
+   committed-rev="4489"/>
+<entry
+   checksum="6312f460aee2777da227640183c7ef81"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="LeapsMannersTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="522dc28fd43fd14c545ac2c5f962f7ba"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Path.java"
+   committed-rev="4489"/>
+<entry
+   checksum="3e4f462db1dd18693891e5fbb9dcc35b"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ReteooMannersTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="b81ec2ed2ef38fa6de4dd5aec18c7490"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Seating.java"
+   committed-rev="4489"/>
+<entry
+   checksum="6423e98fd28ee2ce799b189f0808230c"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Sex.java"
+   committed-rev="4489"/>
+</wc-entries>
