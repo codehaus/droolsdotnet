@@ -1,0 +1,20 @@
+group javaFunction;
+
+function(package, imports, className, methodName, returnType, parameterTypes, parameterNames, text) ::= <<
+namespace <package>
+{
+
+	<imports:{ importEntry | using <importEntry>;<\n>}>   
+
+	[System.Serializable]
+	public class <className>
+	{
+	    private static readonly long serialVersionUID  = 7952983928232702826L;
+	    
+	    public static <returnType> <methodName>(<parameterTypes, parameterNames:{ type, name | <type> <name>}; separator=",\n">) {
+	        <text>
+	    }
+	}
+}     
+	
+>>
