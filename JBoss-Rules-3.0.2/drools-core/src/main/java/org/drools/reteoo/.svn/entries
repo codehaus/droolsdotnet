@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="4963"
+   repos="http://anonsvn.labs.jboss.com"
+   url="http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/drools-core/src/main/java/org/drools/reteoo"
+   last-author="tirelli"
+   uuid="c60d74c8-e8f6-0310-9e8f-d4a2fc68ab70"
+   committed-date="2006-07-01T13:38:00.508768Z"
+   name=""
+   kind="dir"
+   committed-rev="4898"/>
+<entry
+   checksum="53537dbd8402f19b3d66f0508278a245"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="AlphaNode.java"
+   committed-rev="4489"/>
+<entry
+   checksum="e8f6dc9698db20f2484fabc07af96e5f"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="AlphaNodeSwitch.java"
+   committed-rev="4489"/>
+<entry
+   checksum="84517053bd6df03c3d66d6e0b1606364"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="BaseNode.java"
+   committed-rev="4489"/>
+<entry
+   checksum="937f4e4ea0de63c526e6138e317a9a72"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="BetaMemory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="4165fbd542823d90ee973c57e85cd5d0"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="BetaNode.java"
+   committed-rev="4489"/>
+<entry
+   checksum="aeeabf0cbc25e287c133b5b5461c8513"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:03.375000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="DefaultObjectSinkList.java"
+   committed-rev="4489"/>
+<entry
+   checksum="9aa4ee169e4f96c3328c2fec9a712b73"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="EvalConditionNode.java"
+   committed-rev="4489"/>
+<entry
+   checksum="1fb028cf365e2297c45e5495c097287b"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="FactHandleList.java"
+   committed-rev="4489"/>
+<entry
+   checksum="63fc86658d63802aeb673ef8e06e42fe"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:58.453000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="HashedObjectSinkList.java"
+   committed-rev="4489"/>
+<entry
+   checksum="e6aaba065002b43a6cb06e6679214b8f"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="InitialFactHandle.java"
+   committed-rev="4489"/>
+<entry
+   checksum="e1f8f4c698c8c44b16adca5ba6fc75d1"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="InitialFactImpl.java"
+   committed-rev="4489"/>
+<entry
+   checksum="5fbc8718cec35616967dd55876a87ae5"
+   last-author="tirelli"
+   text-time="2006-07-01T13:38:00.508000Z"
+   committed-date="2006-07-01T13:38:00.508768Z"
+   kind="file"
+   name="JoinNode.java"
+   committed-rev="4898"/>
+<entry
+   checksum="8d4427172f3b2cb4c3a7dbab3d8e93f1"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="LeftInputAdapterNode.java"
+   committed-rev="4489"/>
+<entry
+   checksum="884fc32bb0925a8d8a63aa109203f341"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="NotNode.java"
+   committed-rev="4489"/>
+<entry
+   checksum="94a3014948dde280cba23bf585f2e36d"
+   last-author="tirelli"
+   text-time="2006-07-01T13:38:00.508000Z"
+   committed-date="2006-07-01T13:38:00.508768Z"
+   kind="file"
+   name="ObjectMatches.java"
+   committed-rev="4898"/>
+<entry
+   checksum="9a69b6aec33fe4b08e8eb27a49683954"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectSink.java"
+   committed-rev="4489"/>
+<entry
+   checksum="88f18029950d125713c2ada0040a9025"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:58.906000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectSinkList.java"
+   committed-rev="4489"/>
+<entry
+   checksum="8b76f846f90f4ad5bf51f9fe7eef2601"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:58.734000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectSinkListFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="8762a8d0300a553f78c42d3d8ea6c74a"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectSource.java"
+   committed-rev="4489"/>
+<entry
+   checksum="0400b8b55d8648997da4517a3b534711"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectTypeNode.java"
+   committed-rev="4489"/>
+<entry
+   checksum="51fe7cb6a7f1127af8625e74ba3db7d9"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="QueryTerminalNode.java"
+   committed-rev="4489"/>
+<entry
+   checksum="e51178ccd3f1fbb8f71c8c6709b2ecf9"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Rete.java"
+   committed-rev="4489"/>
+<entry
+   checksum="e1e46c2f543e6cb143e82d3a7b804c59"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ReteTuple.java"
+   committed-rev="4489"/>
+<entry
+   checksum="c2a5825ec644dbb6d4408677b7a32656"
+   last-author="tirelli"
+   text-time="2006-06-22T02:27:59.876000Z"
+   committed-date="2006-06-22T02:27:59.876603Z"
+   kind="file"
+   name="ReteooBuilder.java"
+   committed-rev="4803"/>
+<entry
+   checksum="b6ee641d237a2c6dc4bbfa158d435d2e"
+   last-author="tirelli"
+   text-time="2006-05-31T00:26:21.245000Z"
+   committed-date="2006-05-31T00:26:21.245429Z"
+   kind="file"
+   name="ReteooFactHandleFactory.java"
+   committed-rev="4502"/>
+<entry
+   checksum="0141aa72d7c0679d22132ee10bbd61d7"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-06-06T09:59:25.312000Z"
+   committed-date="2006-06-06T09:59:25.312049Z"
+   kind="file"
+   name="ReteooRuleBase.java"
+   committed-rev="4638"/>
+<entry
+   checksum="e76766305f4b3fedd61c17cee60c7de9"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ReteooToJungVisitor.java"
+   committed-rev="4489"/>
+<entry
+   checksum="39c3fe41197e8fcf527fe214586a958a"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-06-30T01:06:59.874000Z"
+   committed-date="2006-06-30T01:06:59.874500Z"
+   kind="file"
+   name="ReteooWorkingMemory.java"
+   committed-rev="4880"/>
+<entry
+   checksum="c2c0995d31024388221b2b8775dfe394"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="RightInputAdapterNode.java"
+   committed-rev="4489"/>
+<entry
+   checksum="a40a66a7ff1d29f2ff8e1a2e6547738d"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-06-06T09:59:25.312000Z"
+   committed-date="2006-06-06T09:59:25.312049Z"
+   kind="file"
+   name="TerminalNode.java"
+   committed-rev="4638"/>
+<entry
+   checksum="435ad2b7ea147d7b45c6c56669a60a55"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="TupleKey.java"
+   committed-rev="4489"/>
+<entry
+   checksum="c971c10a487d98b463ed0e53d5158dec"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="TupleMatch.java"
+   committed-rev="4489"/>
+<entry
+   checksum="71decc06724fc142c6fa4cee8cebe37e"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="TupleSink.java"
+   committed-rev="4489"/>
+<entry
+   checksum="d182725afc4c63f8c3b1a1a445cecf5a"
+   last-author="tirelli"
+   text-time="2006-06-26T00:59:51.079000Z"
+   committed-date="2006-06-26T00:59:51.079470Z"
+   kind="file"
+   name="TupleSource.java"
+   committed-rev="4817"/>
+<entry
+   name="beta"
+   kind="dir"/>
+</wc-entries>
