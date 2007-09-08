@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="4963"
+   repos="http://anonsvn.labs.jboss.com"
+   url="http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/drools-core/src/test/java/org/drools/reteoo/beta"
+   last-author="mark.proctor@jboss.com"
+   uuid="c60d74c8-e8f6-0310-9e8f-d4a2fc68ab70"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="dir"
+   name=""
+   committed-rev="4489"/>
+<entry
+   checksum="87e3cf3f8b54232ce24e5ff7b9fa4b26"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:18.531000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="BaseBetaLeftMemoryTestClass.java"
+   committed-rev="4489"/>
+<entry
+   checksum="8b359c60119359748982bfe9db991774"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:19.078000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="BaseBetaRightMemoryTestClass.java"
+   committed-rev="4489"/>
+<entry
+   checksum="ccf5b95c9eba27d4765701e952dacd81"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:21.109000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="BetaMemoryFactoryTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="80080ee5c61194e21a68806ab5d1e005"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:21.406000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="BooleanConstrainedLeftMemoryTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="eb303ded9dfeb79064556e88d524e1b4"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:18.656000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="BooleanConstrainedRightMemoryTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="e532c956ab86f3849b09924fbd5df9ce"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:20.625000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="DefaultLeftMemoryTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="300dff7855dca3293ad5b6f55329b042"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:20.796000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="DefaultRightMemoryTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="44eb5d8190b3b54629e72dc7619b6cea"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:18.203000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="DummyValueObject.java"
+   committed-rev="4489"/>
+<entry
+   checksum="048adeddbccf426cf81b1bd5815f5cb5"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:20.937000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectEqualConstrLeftMemoryTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="a33ade4f6df26cc377c96d2bc2d31a91"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:21.609000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectEqualConstrRightMemoryTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="72898ac7107f4b5327e42958c0647a04"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:21.250000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectNotEqualConstrLeftMemoryTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="41066273c039edd95495f6988f7a3422"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:18.390000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectNotEqualConstrRightMemoryTest.java"
+   committed-rev="4489"/>
+</wc-entries>
