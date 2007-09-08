@@ -1,0 +1,36 @@
+D/.svn////
+D/beta////
+/AlphaNode.java/0/dummy timestamp/-ko/
+/AlphaNodeSwitch.java/0/dummy timestamp/-ko/
+/BaseNode.java/0/dummy timestamp/-ko/
+/BetaMemory.java/0/dummy timestamp/-ko/
+/BetaNode.java/0/dummy timestamp/-ko/
+/DefaultObjectSinkList.java/0/dummy timestamp/-ko/
+/EvalConditionNode.java/0/dummy timestamp/-ko/
+/FactHandleList.java/0/dummy timestamp/-ko/
+/HashedObjectSinkList.java/0/dummy timestamp/-ko/
+/InitialFactHandle.java/0/dummy timestamp/-ko/
+/InitialFactImpl.java/0/dummy timestamp/-ko/
+/JoinNode.java/0/dummy timestamp/-ko/
+/LeftInputAdapterNode.java/0/dummy timestamp/-ko/
+/NotNode.java/0/dummy timestamp/-ko/
+/ObjectMatches.java/0/dummy timestamp/-ko/
+/ObjectSink.java/0/dummy timestamp/-ko/
+/ObjectSinkList.java/0/dummy timestamp/-ko/
+/ObjectSinkListFactory.java/0/dummy timestamp/-ko/
+/ObjectSource.java/0/dummy timestamp/-ko/
+/ObjectTypeNode.java/0/dummy timestamp/-ko/
+/QueryTerminalNode.java/0/dummy timestamp/-ko/
+/Rete.java/0/dummy timestamp/-ko/
+/ReteTuple.java/0/dummy timestamp/-ko/
+/ReteooBuilder.java/0/dummy timestamp/-ko/
+/ReteooFactHandleFactory.java/0/dummy timestamp/-ko/
+/ReteooRuleBase.java/0/dummy timestamp/-ko/
+/ReteooToJungVisitor.java/0/dummy timestamp/-ko/
+/ReteooWorkingMemory.java/0/dummy timestamp/-ko/
+/RightInputAdapterNode.java/0/dummy timestamp/-ko/
+/TerminalNode.java/0/dummy timestamp/-ko/
+/TupleKey.java/0/dummy timestamp/-ko/
+/TupleMatch.java/0/dummy timestamp/-ko/
+/TupleSink.java/0/dummy timestamp/-ko/
+/TupleSource.java/0/dummy timestamp/-ko/
