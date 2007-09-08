@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="4963"
+   repos="http://anonsvn.labs.jboss.com"
+   url="http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/drools-core/src/main/java/org/drools/spi"
+   last-author="michael.neale@jboss.com"
+   uuid="c60d74c8-e8f6-0310-9e8f-d4a2fc68ab70"
+   committed-date="2006-06-22T04:07:32.703462Z"
+   kind="dir"
+   name=""
+   committed-rev="4804"/>
+<entry
+   checksum="3499dfca76df70bbd52836e5e00524d5"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Activation.java"
+   committed-rev="4489"/>
+<entry
+   checksum="ac83945b10c34e8e0b9cd9511754f85b"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ActivationGroup.java"
+   committed-rev="4489"/>
+<entry
+   checksum="5741a4f2714adfa3874d70259e7b9ccf"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="AgendaFilter.java"
+   committed-rev="4489"/>
+<entry
+   checksum="0ae3ac4e44b1a9a04f586da6ee86ae2e"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-06-06T08:52:54.553000Z"
+   committed-date="2006-06-06T08:52:54.553603Z"
+   kind="file"
+   name="AgendaGroup.java"
+   committed-rev="4636"/>
+<entry
+   checksum="adce6d9260162992d1eb0448705b94ac"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="AsyncExceptionHandler.java"
+   committed-rev="4489"/>
+<entry
+   checksum="8bd963382afe237c845001790bba2100"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ClassObjectTypeResolver.java"
+   committed-rev="4489"/>
+<entry
+   checksum="eb7c5a2c0492db8df8022272fd94c0ec"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ColumnExtractor.java"
+   committed-rev="4489"/>
+<entry
+   checksum="e00e51c40e0d651fa59e0315b289494d"
+   last-author="michael.neale@jboss.com"
+   prop-time="2006-07-10T01:44:56.515000Z"
+   text-time="2006-06-22T04:07:32.703000Z"
+   committed-date="2006-06-22T04:07:32.703462Z"
+   kind="file"
+   name="CompiledInvoker.java"
+   committed-rev="4804"/>
+<entry
+   checksum="5137dfb913cde90ee4153cffebf9ad8f"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ConflictResolver.java"
+   committed-rev="4489"/>
+<entry
+   checksum="e0ec884af12b26928b3fc438cc827089"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Consequence.java"
+   committed-rev="4489"/>
+<entry
+   checksum="38a1c852ee54c31a7d30a7c780c7cabd"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ConsequenceException.java"
+   committed-rev="4489"/>
+<entry
+   checksum="36511c04de2c5dbf5acec59b65d28ab6"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Constraint.java"
+   committed-rev="4489"/>
+<entry
+   checksum="bb6d33d23db21173a6d276f660d1d15e"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-03-21T09:58:08.626000Z"
+   committed-date="2006-03-21T09:58:08.626118Z"
+   kind="file"
+   name="Duration.java"
+   committed-rev="3089"/>
+<entry
+   checksum="466f66c5345046c9beadae61226ee203"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="EvalExpression.java"
+   committed-rev="4489"/>
+<entry
+   checksum="e17b00d7003b88fcc453cfc867ad1f81"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Evaluator.java"
+   committed-rev="4489"/>
+<entry
+   checksum="c61a66c02781aa86479752da67f42581"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Extractor.java"
+   committed-rev="4489"/>
+<entry
+   checksum="2afe9d6b141ee298351402e76b8bf976"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="FactHandleFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="dc6d757c24f09090ccd0be82d6ee1a03"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="FieldConstraint.java"
+   committed-rev="4489"/>
+<entry
+   checksum="946aea57f4b60478035900615e6b211e"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="FieldExtractor.java"
+   committed-rev="4489"/>
+<entry
+   checksum="d67cedd1342788bd4095812731d80a01"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="FieldValue.java"
+   committed-rev="4489"/>
+<entry
+   checksum="4a3f3df8fba27ff8a34ec75644b299dd"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Functions.java"
+   committed-rev="4489"/>
+<entry
+   checksum="4dd9b4f32ca63b31d6abc7ad738d3714"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:56.625000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Invoker.java"
+   committed-rev="4489"/>
+<entry
+   checksum="48aed15cb8f75444166d47bc96d2b6ff"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="KnowledgeHelper.java"
+   committed-rev="4489"/>
+<entry
+   checksum="5c86fbff06590df8df55ad309b5dbeca"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectType.java"
+   committed-rev="4489"/>
+<entry
+   checksum="b11e4dd29d8898bab7689bf7f4fb4d68"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectTypeResolver.java"
+   committed-rev="4489"/>
+<entry
+   checksum="bd5a830146ba1a5a193acfaf5724bcff"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="PredicateExpression.java"
+   committed-rev="4489"/>
+<entry
+   checksum="f52dedf20c738242fc4bba603eac9bda"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-06-06T08:52:54.553000Z"
+   committed-date="2006-06-06T08:52:54.553603Z"
+   kind="file"
+   name="PropagationContext.java"
+   committed-rev="4636"/>
+<entry
+   checksum="1e3eee5808f7b1ca508347079a14ecd7"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ReteooNode.java"
+   committed-rev="4489"/>
+<entry
+   checksum="ca7dc52316c5dbbbe4c55bfb462bbc78"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ReturnValueExpression.java"
+   committed-rev="4489"/>
+<entry
+   checksum="14bdd09507e3cd00a67239c5010e0b1d"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:56.484000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="RuleComponent.java"
+   committed-rev="4489"/>
+<entry
+   checksum="756c1838b3e81b4b348d9ae3dfa6a948"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Semaphore.java"
+   committed-rev="4489"/>
+<entry
+   checksum="c2c27b8e4cd2d495547118a5dc1a7e6d"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Tuple.java"
+   committed-rev="4489"/>
+<entry
+   checksum="a5108859ff4aa60a6fdc1fa7bce8ab83"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="TypeResolver.java"
+   committed-rev="4489"/>
+</wc-entries>
