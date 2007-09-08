@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="4963"
+   repos="http://anonsvn.labs.jboss.com"
+   url="http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/drools-core/src/main/java/org/drools/visualize"
+   last-author="mark.proctor@jboss.com"
+   uuid="c60d74c8-e8f6-0310-9e8f-d4a2fc68ab70"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="dir"
+   name=""
+   committed-rev="4489"/>
+<entry
+   checksum="066856887a12b886c27e916221653880"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ReteooJungViewer.java"
+   committed-rev="4489"/>
+<entry
+   checksum="7a04182d9a72599ac0ca9aba99bf65bd"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ReteooJungViewerPanel.java"
+   committed-rev="4489"/>
+<entry
+   checksum="f90a4051cd5aef95be92eaa7d4539983"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ReteooLayout.java"
+   committed-rev="4489"/>
+<entry
+   checksum="5275d22f629a5aab5b81853b9ad8844e"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ReteooLayoutSolver.java"
+   committed-rev="4489"/>
+<entry
+   checksum="583cf1021bc03bd52f1df5ed0d224aff"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="Row.java"
+   committed-rev="4489"/>
+<entry
+   checksum="b44ec75cfec371732776024e51785bf0"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="RowList.java"
+   committed-rev="4489"/>
+<entry
+   checksum="6ec0448cd34c35a7084205bde36cfbe6"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="VertexColorSet.java"
+   committed-rev="4489"/>
+<entry
+   checksum="ce0ba3a900f94874082bee8881e3ce78"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="VertexFunctions.java"
+   committed-rev="4489"/>
+<entry
+   checksum="923dfc3667bfec8f95e39fd8cc6201a8"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="VertexLabelPaintFunction.java"
+   committed-rev="4489"/>
+</wc-entries>
