@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="4963"
+   repos="http://anonsvn.labs.jboss.com"
+   url="http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/drools-core/src/main/java/org/drools/base/evaluators"
+   last-author="mark.proctor@jboss.com"
+   uuid="c60d74c8-e8f6-0310-9e8f-d4a2fc68ab70"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="dir"
+   name=""
+   committed-rev="4489"/>
+<entry
+   checksum="6698d1ca210c02967899afdd5a108114"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.250000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ArrayFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="9199224e18536caddbee11b286c5d524"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.265000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="BooleanFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="802978e7769885c9ef14ea76942fb421"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.343000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ByteFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="26a6a9e17ad0e90d34f452e752a2a3f9"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.171000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="CharacterFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="5b5aaa8caa758d4a88b79221c7c1f961"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.187000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="DateFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="f1a1cd8fabe1515000de50b8a4a4df05"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.140000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="DoubleFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="e2f961ecd18b7401b86ad129cf00190c"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.359000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="FloatFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="ab2b30712d70680537f645701661f1f9"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.218000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="IntegerFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="eef5de6dc43e846c416b5f36ba1e46bd"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.296000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="LongFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="46d1513f975991bd579f28d17a94e5e6"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.390000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="45c4f9d04cac52c0e0f89cd4eebec7be"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.312000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ShortFactory.java"
+   committed-rev="4489"/>
+<entry
+   checksum="10d6bf856e8c927f661490058ec9848f"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:45:12.406000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="StringFactory.java"
+   committed-rev="4489"/>
+</wc-entries>
