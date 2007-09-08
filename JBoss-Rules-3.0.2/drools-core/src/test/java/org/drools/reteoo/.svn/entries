@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="4963"
+   repos="http://anonsvn.labs.jboss.com"
+   url="http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/drools-core/src/test/java/org/drools/reteoo"
+   last-author="mark.proctor@jboss.com"
+   uuid="c60d74c8-e8f6-0310-9e8f-d4a2fc68ab70"
+   committed-date="2006-06-30T01:06:59.874500Z"
+   name=""
+   kind="dir"
+   committed-rev="4880"/>
+<entry
+   checksum="d9f107a03ced71c70bb368bf15112d3b"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="AddRemoveTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="4de14064266c4f05f8b91777178c14a4"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-31T17:07:01.141000Z"
+   committed-date="2006-05-31T17:07:01.141627Z"
+   kind="file"
+   name="AgendaTest.java"
+   committed-rev="4527"/>
+<entry
+   checksum="11ee5671e99d11f9633cfc2980e92b53"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="AlphaNodeSwitchTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="73a0f8bffdcfc2313644a142371394ab"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="AlphaNodeTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="1df61954c4cba2903846f22ff987de17"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="BaseNodeTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="6bcffa10e7681cc0181c9354c9b62ebf"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="CrossProductTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="6d908df847ce335e33e604a18e98a347"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="DefaultFactHandleFactoryTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="626d501cb6a7483a59d3dfedf7a7c6d7"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="EvalConditionNodeTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="90be4840bc96c5889f080187a40ce9d3"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="FactHandleTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="1ae636265a9bd8b360f5371a7b21ea38"
+   last-author="mark.proctor@jboss.com"
+   prop-time="2006-07-10T01:44:17.187000Z"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="HashedObjectSinkListTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="db8d494c14cd3da4f3d249e0667ff045"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="InstrumentedReteTuple.java"
+   committed-rev="4489"/>
+<entry
+   checksum="267f90b909c90b557b7fd48c2053c85c"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="JoinNodeTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="db0e5af7cd492f96250f933530b3cee3"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="LeftInputAdapterNodeTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="05d47f76bd3e6bf2707e8a09ab460ce3"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-31T17:07:01.141000Z"
+   committed-date="2006-05-31T17:07:01.141627Z"
+   kind="file"
+   name="LogicalAssertionTest.java"
+   committed-rev="4527"/>
+<entry
+   checksum="7dbdaf100b8b085e21fdacb5a80263d7"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="MockEvalCondition.java"
+   committed-rev="4489"/>
+<entry
+   checksum="353c31d763cbcffdae5d2b9d76bdca21"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="MockObjectSink.java"
+   committed-rev="4489"/>
+<entry
+   checksum="2e732f5cf0bb99beb920990284e2e01f"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="MockObjectSource.java"
+   committed-rev="4489"/>
+<entry
+   checksum="486ac5759dc9cce47f1a02695d5832ce"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="MockTupleSink.java"
+   committed-rev="4489"/>
+<entry
+   checksum="7988ef92d305b89b7098f16a30183f7f"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="MockTupleSource.java"
+   committed-rev="4489"/>
+<entry
+   checksum="3f759336365256633255c3bef25e6ad7"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="NotNodeTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="a006614586aef53d10cd1f7d3ef50abe"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectSourceTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="0efbb3fd0e20032ee84b308f8f8cc10b"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ObjectTypeNodeTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="b9c6574ee7cda3a6f2f7a861236c7425"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="PropertyChangeListenerTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="769530e726dcbdcf336aa9d9602327de"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="QueryTerminalNodeTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="3aed9804f294bc96cd6b7104a97b1525"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="ReteTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="a427ad138839ddb577cc74e51f6dee70"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-06-30T01:06:59.874000Z"
+   committed-date="2006-06-30T01:06:59.874500Z"
+   kind="file"
+   name="ReteooWorkingMemoryTest.java"
+   committed-rev="4880"/>
+<entry
+   checksum="1c5772207bf39b8e47fc727d1a03848f"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="RuleBaseImplTest.java"
+   committed-rev="4489"/>
+<entry
+   checksum="919901bf2135cfd7878a6e4f5d291c90"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-31T17:07:01.141000Z"
+   committed-date="2006-05-31T17:07:01.141627Z"
+   kind="file"
+   name="SchedulerTest.java"
+   committed-rev="4527"/>
+<entry
+   checksum="60e96d90afde6ad48d822164efc75a3f"
+   last-author="mark.proctor@jboss.com"
+   text-time="2006-05-30T17:56:37.433000Z"
+   committed-date="2006-05-30T17:56:37.433754Z"
+   kind="file"
+   name="TupleSourceTest.java"
+   committed-rev="4489"/>
+<entry
+   name="beta"
+   kind="dir"/>
+</wc-entries>
