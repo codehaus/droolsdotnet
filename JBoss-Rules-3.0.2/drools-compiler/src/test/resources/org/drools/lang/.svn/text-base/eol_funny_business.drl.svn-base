@@ -1,9 +1,0 @@
-package test
-
-rule type1
-  when
-	Something(end == "foo)
-  then
-  	The.end();
-end
-
