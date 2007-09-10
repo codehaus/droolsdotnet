@@ -1,0 +1,9 @@
+call del drools-3.0.dll
+call del drools-3.0.pdb
+call ant clean-all build-all -Dtest.skip=true
+call ikvmc -target:library -out:drools-3.0.dll -debug target\drools-core-3.0.2.jar target\drools-compiler-3.0.2.jar target\drools-decisiontables-3.0.2.jar -reference:drools-dep.dll
+!copy drools-3.0.dll C:\JBoss-Rules\DroolsDotNet\prototypes\Prototype1\Prototype1\bin\Debug
+!copy drools-3.0.pdb C:\JBoss-Rules\DroolsDotNet\prototypes\Prototype1\Prototype1\bin\Debug
+!copy drools-3.0.dll C:\esahi\drools.dotnet\lib
+!copy drools-3.0.pdb C:\esahi\drools.dotnet\lib
+pause

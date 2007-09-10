@@ -1,0 +1,258 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.drools</groupId>
+  <artifactId>drools</artifactId>
+  <packaging>pom</packaging>
+  <name>Drools</name>
+  <version>3.0.2</version>
+
+  <issueManagement>
+    <system>jira</system>
+    <url>http://jira.codehaus.org/browse/DROOLS</url>
+  </issueManagement>
+
+  <ciManagement>
+    <system>continuum</system>
+    <url>http://ci.codehaus.org:8001/continuum/servlet/continuum/target/Summary.vm/fid/continuumProject</url>
+    <notifiers>
+      <notifier>
+        <type>mail</type>
+        <configuration>
+          <address>dev@drools.codehaus.org</address>
+        </configuration>        
+      </notifier>
+      
+      <notifier>
+        <type>irc</type>
+        <configuration>
+          <host>irc.codehaus.org</host>
+          <port>6667</port>
+          <channel>#drools</channel>
+        </configuration>
+      </notifier>        
+    </notifiers>
+  </ciManagement>
+
+    <mailingLists>
+        <mailingList>
+            <name>announce</name>
+            <subscribe>announce-subscribe@drools.codehaus.org</subscribe>
+            <unsubscribe>announce-unsubscribe@drools.codehaus.org</unsubscribe>
+            <archive>http://archive.drools.codehaus.org/announce/</archive>
+        </mailingList>
+        <mailingList>
+            <name>user</name>
+            <subscribe>user-subscribe@drools.codehaus.org</subscribe>
+            <unsubscribe>user-unsubscribe@drools.codehaus.org</unsubscribe>
+            <archive>http://archive.drools.codehaus.org/user/</archive>
+        </mailingList>
+        <mailingList>
+            <name>dev</name>
+            <subscribe>dev-subscribe@drools.codehaus.org</subscribe>
+            <unsubscribe>dev-unsubscribe@drools.codehaus.org</unsubscribe>
+            <archive>http://archive.drools.codehaus.org/dev/</archive>
+        </mailingList>
+        <mailingList>
+            <name>drools cvs messages</name>
+            <subscribe>scm-subscribe@drools.codehaus.org</subscribe>
+            <unsubscribe>scm-unsubscribe@drools.codehaus.org</unsubscribe>
+            <archive>http://archive.drools.codehaus.org/scm/</archive>
+        </mailingList>
+    </mailingLists>
+
+    <inceptionYear>2001</inceptionYear>
+
+    <developers>
+        <developer>
+            <name>Mark Proctor</name>
+            <id>mark</id>
+            <email>mark.proctor@jboss.com</email>
+            <roles>
+                <role>Project Lead</role>
+            </roles>
+            <timezone>0</timezone>
+            <organization>JBoss Inc.</organization>
+        </developer> 
+           
+        <developer>
+            <name>Michael Neale</name>
+            <id>mic</id>
+            <email>michael.neale@gmail.com</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+10</timezone>
+            <organization>JBoss Inc.</organization>
+        </developer>
+        
+        <developer>
+            <name>Kris Verlaenen</name>
+            <id>kris</id>
+            <email>kris.verlaenen@gmail.com</email>
+            <organization>JBoss Inc.</organization>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>        
+                
+        <developer>
+            <name>Bob McWhirter</name>
+            <id>bob</id>
+            <email>bob@werken.com</email>
+            <organization>The Werken Company</organization>
+            <roles>
+                <role>Founder</role>
+            </roles>
+            <timezone>-5</timezone>
+        </developer>
+
+        
+        <developer>
+            <name>Edson Tirelli</name>
+            <id>tirelli</id>
+            <email>tirelli@post.com</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>-3</timezone>
+        </developer>
+    </developers>
+
+
+  <scm>
+    <connection>scm:svn:http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/</connection>
+    <url>http://anonsvn.labs.jboss.com/labs/jbossrules/trunk/</url>
+  </scm>
+
+
+  <organization>
+    <name>Codehaus</name>
+    <url>http://www.codehaus.org/</url>
+  </organization>
+
+  <repositories>
+    <repository>
+      <id>ibiblio</id>
+      <url>http://www.ibiblio.org/maven2/</url>
+    </repository>
+    
+    <repository>
+      <id>jboss</id>
+      <url>http://repository.jboss.com/maven2/</url>
+    </repository>    
+      
+    <repository>
+      <id>basedir</id>
+      <url>file://${basedir}/repository</url>
+    </repository>           
+    
+    <repository>
+      <id>Maven Snapshots</id>
+      <url>http://snapshots.maven.codehaus.org/maven2/</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </repository>    
+  </repositories>
+
+   <dependencies>
+     <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>3.8.1</version>
+        <scope>test</scope>
+     </dependency>                                        
+   </dependencies>
+
+  <reporting>
+    <plugins>
+      <!--plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clover-plugin</artifactId>
+      </plugin-->
+      
+        <plugin>
+          <artifactId>maven-javadoc-plugin</artifactId>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>jxr-maven-plugin</artifactId>
+        </plugin>      
+      
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>     
+    </plugins>
+  </reporting>
+
+  <build>
+   <plugins>
+            <plugin>
+                 <artifactId>maven-assembly-plugin</artifactId>
+                 <version>2.0-beta-1</version>
+                 <configuration>
+                   <descriptor>bin.xml</descriptor>
+                   <finalName>final_name</finalName>
+                   <outputDirectory>output/directory</outputDirectory>
+                   <workDirectory>target/assembly/work</workDirectory>
+                 </configuration>
+            </plugin>   
+   
+     <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>dependency-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>../drools-ide/lib</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <minmemory>128m</minmemory>
+          <maxmemory>512</maxmemory>
+          <aggregate>true</aggregate>
+        </configuration>
+      </plugin>    
+      
+      <!--plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clover-plugin</artifactId>
+        <configuration/>
+        <executions>
+          <execution>
+            <phase>pre-site</phase>
+            <goals>
+              <goal>instrument</goal>
+              <goal>aggregate</goal>              
+            </goals>
+          </execution>
+        </executions>
+      </plugin-->        
+    </plugins>        
+  </build>
+
+  <modules>
+    <module>drools-core</module>    
+    <module>drools-compiler</module>       
+    <module>drools-jsr94</module> 
+    <module>drools-decisiontables</module>
+  </modules>
+
+
+
+</project>
