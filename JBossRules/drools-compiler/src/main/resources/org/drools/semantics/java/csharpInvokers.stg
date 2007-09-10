@@ -1,0 +1,158 @@
+group javaInvokeable;
+
+getMethodBytecode(package, ruleClassName, methodName) ::= <<
+    public java.util.List getMethodBytecode() {
+    System.Console.Out.Write("Inside GetMethodByteCode");
+    return null;
+    }
+>>    
+    
+
+equals() ::= <<
+		public bool equals(object obj) {
+        if (obj == null ) {
+            return false;
+        } else if ( obj == this ){
+            return true;
+        }
+        
+        if ( ! (obj.GetType() == typeof(org.drools.spi.CompiledInvoker)) ) {
+            return false;
+        }
+        
+        org.drools.spi.CompiledInvoker otherObj = ( org.drools.spi.CompiledInvoker ) obj;
+        
+        return org.drools.util.asm.MethodComparator.compareBytecode( getMethodBytecode(), otherObj.getMethodBytecode() );
+    }>>
+
+hashCode(hashCode) ::= <<
+    public int hashCode() {
+        return <hashCode>;
+    }
+>>
+
+returnValueInvoker(package, invokerClassName, ruleClassName, methodName, declarations, declarationTypes, globals, globalTypes, hashCode) ::= <<
+namespace <package>
+{
+
+	public class <invokerClassName> : org.drools.spi.ReturnValueExpression, org.drools.spi.CompiledInvoker
+	{
+	    private static readonly long serialVersionUID  = 7952983928232702826L;
+	    
+	    public object evaluate(org.drools.spi.Tuple tuple,
+	                            org.drools.rule.Declaration[] declarations, 
+	                            org.drools.WorkingMemory workingMemory) {                               
+	
+	        <declarationTypes, declarations:{ type, declr| <type> <declr.identifier> = ( <type> ) declarations[<i0>].getValue( ( (org.drools.common.InternalFactHandle) tuple.get( declarations[<i0>] ) ).getObject() );<\n>}>
+	        <globalTypes, globals:{ type, identifier | <type> <identifier> = ( <type> ) workingMemory.getGlobal( "<identifier>" );<\n>}>    
+	        
+	        return <ruleClassName>.<methodName>( 
+	            <declarations:{ declr | <declr.identifier>}; separator=",\n"><if(globals)><if(declarations)>,<endif><endif>
+		        <globals:{ identifier | <identifier>}; separator=",\n"> );
+	    }    
+	    
+    <hashCode(hashCode=hashCode)>
+    
+    <getMethodBytecode(package=package, ruleClassName=ruleClassName, methodName=methodName)>
+    
+    <equals()>    
+
+	    
+	}
+}     
+>>
+
+predicateInvoker(package, invokerClassName, ruleClassName, methodName, declaration, declarationType, 
+                 declarations, declarationTypes, globals, globalTypes, hashCode) ::= <<
+namespace <package>
+{
+	public class <invokerClassName> : org.drools.spi.PredicateExpression, org.drools.spi.CompiledInvoker
+	{
+	    private static readonly long serialVersionUID  = 7952983928232702826L;
+	    
+	    public System.Boolean evaluate(org.drools.spi.Tuple tuple,
+	                            org.drools.FactHandle factHandle,
+	                            org.drools.rule.Declaration declaration,
+	                            org.drools.rule.Declaration[] declarations, 
+	                            org.drools.WorkingMemory workingMemory){                               
+			<declarationType> <declaration.identifier> = (<declarationType>) declaration.getValue( workingMemory.getObject( factHandle ) );
+	        <declarationTypes, declarations:{ type, declr| <type> <declr.identifier> = ( <type> ) declarations[<i0>].getValue( ( (org.drools.common.InternalFactHandle) tuple.get( declarations[<i0>] ) ).getObject() );<\n>}>
+	        <globalTypes, globals:{ type, identifier | <type> <identifier> = ( <type> ) workingMemory.getGlobal( "<identifier>" );<\n>}>    
+	        
+	        return <ruleClassName>.<methodName>( 
+	            <declaration.identifier><if(declarations)>,<endif>
+	            <declarations:{ declr | <declr.identifier>}; separator=",\n"><if(globals)>,<endif>
+		        <globals:{ identifier | <identifier>}; separator=",\n"> );
+	    }
+	    
+	    <hashCode(hashCode=hashCode)>
+	    
+	    <getMethodBytecode(package=package, ruleClassName=ruleClassName, methodName=methodName)>
+	    
+	    <equals()>    
+	}
+}     
+>>
+
+
+evalInvoker(package, invokerClassName, ruleClassName, methodName, declarations, declarationTypes, globals, globalTypes, hashCode) ::= <<
+namespace <package>
+{
+
+	using org.drools.asm.ClassReader;
+	using org.drools.asm.util.TraceMethodVisitor;
+	using org.drools.util.asm.MethodComparator.Tracer;
+	
+	public class <invokerClassName> : org.drools.spi.EvalExpression, org.drools.spi.CompiledInvoker
+	{
+	    private static readonly long serialVersionUID  = 7952983928232702826L;
+	    
+	    public boolean evaluate(org.drools.spi.Tuple tuple,
+	                            org.drools.rule.Declaration[] declarations, 
+	                            org.drools.WorkingMemory workingMemory){                               
+	
+	        <declarationTypes, declarations:{ type, declr| <type> <declr.identifier> = ( <type> ) declarations[<i0>].getValue( ( (org.drools.common.InternalFactHandle) tuple.get( declarations[<i0>] ) ).getObject() );<\n>}>
+	        <globalTypes, globals:{ type, identifier | <type> <identifier> = ( <type> ) workingMemory.getGlobal( "<identifier>" );<\n>}>    
+	        
+	        return <ruleClassName>.<methodName>( 
+	            <declarations:{ declr | <declr.identifier>}; separator=",\n"><if(globals)><if(declarations)>,<endif><endif>
+		        <globals:{ identifier | <identifier>}; separator=",\n"> );
+	    }
+	
+	    <hashCode(hashCode=hashCode)>
+	    
+	    <getMethodBytecode(package=package, ruleClassName=ruleClassName, methodName=methodName)>
+	    
+	    <equals()>  
+	}
+}     
+>>
+
+consequenceInvoker(package, invokerClassName, ruleClassName, methodName, declarations, declarationTypes, indexes, globals, globalTypes, text) ::= <<
+namespace <package>
+{
+	public class <invokerClassName> : org.drools.spi.Consequence
+	{
+	    private static readonly long serialVersionUID  = 7952983928232702826L;
+	
+	    public void evaluate(org.drools.spi.KnowledgeHelper knowledgeHelper,
+	                         org.drools.WorkingMemory workingMemory) {    
+	                       
+	        org.drools.spi.Tuple tuple = knowledgeHelper.getTuple();
+	        org.drools.rule.Rule rule = knowledgeHelper.getRule();
+	        org.drools.rule.Declaration[] declarations = rule.getDeclarations();                                                  
+	
+	        <declarations, indexes:{ declr, index| org.drools.common.InternalFactHandle <declr.identifier>__Handle__ = ( org.drools.common.InternalFactHandle ) tuple.get( declarations[<index>] );<\n>}>
+	
+	        <declarationTypes, declarations, indexes :{ type, declr, index| <type> <declr.identifier> = ( <type> )  declarations[<index>].getValue( <declr.identifier>__Handle__.getObject() );<\n>}>
+	        
+	        <globalTypes, globals:{ type, identifier | <type> <identifier> = ( <type> ) workingMemory.getGlobal( "<identifier>" );<\n>}>    
+	        
+	        <ruleClassName>.<methodName>( 
+	            knowledgeHelper<if(declarations)>,<endif>
+	            <declarations:{ declr | <declr.identifier>, <declr.identifier>__Handle__}; separator=",\n"><if(globals)>,<endif>
+		        <globals:{ identifier | <identifier>}; separator=",\n"> );
+	    }
+	} 
+}    
+>>
